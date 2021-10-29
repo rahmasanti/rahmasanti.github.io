@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+</head>
+<body>
+    <div id="my_nanogallery2"></div>
+
+    <script>
+        
+        $(document).ready(function () {
+            var items = []
+            for(let i=1; i<20; i++){
+                items.push({
+                    src : `https://rahmasanti.github.io/selvi/${i}.jpg`,
+                    srct : `https://rahmasanti.github.io/selvi/${i}.jpg`,
+                    title : 'mama'+i
+                })
+            }
+            console.log(items);
+
+            $("#my_nanogallery2").nanogallery2({items: items, "thumbnailOpenImage": true, "locationHash": false});
+        });
+
+        
+    
+    </script>
+</body>
+</html>
